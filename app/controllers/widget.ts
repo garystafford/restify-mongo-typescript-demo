@@ -1,5 +1,4 @@
 import { Request, Response, Next } from 'restify';
-import { logger } from '../services/logger';
 import { Widget } from '../models/Widget';
 import {IWidget } from "../interfaces/widget";
 
