@@ -1,0 +1,6 @@
+C:\Users\gary.stafford\documents\visual studio 2017\Projects\RestaurantWebAPI\RestaurantLocation\obj\Debug\RestaurantLocation.njsproj.CoreCompileInputs.cache
+C:\Users\gary.stafford\documents\visual studio 2017\Projects\RestaurantWebAPI\RestaurantLocation\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\gary.stafford\documents\visual studio 2017\Projects\RestaurantWebAPI\RestaurantLocation\obj\Debug\RestaurantLocation.njsprojResolveAssemblyReference.cache
+C:\Users\gary.stafford\Documents\Visual Studio 2017\Projects\WidgetService\obj\Debug\RestaurantLocation.njsprojResolveAssemblyReference.cache
+C:\Users\gary.stafford\Documents\Visual Studio 2017\Projects\WidgetService\obj\Debug\RestaurantLocation.njsproj.CoreCompileInputs.cache
+C:\Users\gary.stafford\Documents\Visual Studio 2017\Projects\WidgetService\bin\Microsoft.NodejsTools.WebRole.dll
