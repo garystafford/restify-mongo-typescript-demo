@@ -4,7 +4,7 @@ import { Widget } from '../models/Widget';
 import {IWidget } from "../interfaces/widget";
 
 
-class WidgetController {
+export default class WidgetController {
 
 
     findDocuments = (req: Request, res: Response, next: Next) => {
@@ -60,5 +60,3 @@ class WidgetController {
         });
     }
 }
-
-export { WidgetController };

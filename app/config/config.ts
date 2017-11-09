@@ -1,4 +1,4 @@
-class Configuration {
+export default class Config {
 
     private path = require('path');
     private rootPath = this.path.normalize(__dirname + '/..');
@@ -34,5 +34,3 @@ class Configuration {
         }
     };
 }
-
-export { Configuration }

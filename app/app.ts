@@ -2,10 +2,10 @@ import * as fs from 'fs';
 import * as restify from 'restify';
 import mongoose = require('mongoose');
 
-import * as configuration from './config/configuration';
+import configuration from './config/config';
 import { logger } from './services/logger';
 
-const config = new configuration.Configuration();
+const config = new configuration();
 const envSettings = config.envSettings;
 
 export let server = restify.createServer({
