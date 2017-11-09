@@ -4,10 +4,11 @@
   "description": "Restaurant Location http service using restify written in typescript",
   "main": "app.js",
   "scripts": {
-    "test": "npm run compile && mocha dist/test/unit/**/*.spec.js",
-    "test:debug": "npm run compile && mocha --inspect-brk dist/test/unit/**/*.spec.js",
-    "compile": "node_modules/.bin/tsc",
-    "start": "npm run compile && node dist/app/app.js"
+    "build": "tsc --watch",
+    "test": "yarn run compile && mocha dist/test/unit/**/*.spec.js",
+    "test:debug": "yarn run compile && mocha --inspect-brk dist/test/unit/**/*.spec.js",
+    "compile": "tsc",
+    "start": "yarn run compile && node dist/app/app.js"
   },
   "keywords": [
     "typescript",

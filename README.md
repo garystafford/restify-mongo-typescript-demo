@@ -1,8 +1,8 @@
-# Restaurant Location Service
+# Widget Service
 
 _Work in progress..._
 
-Restaurant Location service, written with Node.js, Restify 6.x, Mongoose for MongoDB, Typescript 2.x. Orginal project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
+Widget microservice, written with Node.js, Restify 6, Mongoose for MongoDB, and Typescript 2.x. Orginal project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
 
 ## Working with Project
 
