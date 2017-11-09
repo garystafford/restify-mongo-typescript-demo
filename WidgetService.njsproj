@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
-    <TypeScriptCompile Include="app\config\configuration.ts" />
+    <TypeScriptCompile Include="app\config\config.ts" />
     <TypeScriptCompile Include="app\controllers\widget.ts" />
     <TypeScriptCompile Include="app\interfaces\widget.ts" />
     <TypeScriptCompile Include="app\models\widget.ts">

@@ -7,28 +7,33 @@ Restaurant Location service, written with Node.js, Restify 6.x, Mongoose for Mon
 ## Working with Project
 
 ```bash
-
-# install typescript globally (_optional_)
-npm install typescript -g
-tsc --version # 2.6.1
-
-# build continuously (_optional_)
-tsc --watch
-
 # recommend using yarn instead of npm
 npm install -g yarn
 yarn install
 
+# install typescript globally
+yarn global add typescript
+tsc --version # 2.6.1
+
+# build continuously
+tsc --watch
+
 # transpile typescript
 yarn run compile
 
-# test
+# mocha for testing
+yarn global add mocha
+
+# test (transpiles first)
 yarn test
 
-# start
+# start (transpiles first)
 yarn start
 
 # test sample endpoint
 curl http://localhost:3000/api/ping
+
+# kill node process(es) on Windows
+taskkill /F /IM node.exe
 ```
 
