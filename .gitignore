@@ -42,3 +42,5 @@ app/**/*.map
 test/**/*.js
 test/**/*.map
 dist/
+bin/
+obj/
