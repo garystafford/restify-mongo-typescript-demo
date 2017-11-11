@@ -17,7 +17,7 @@
   "author": "Gary A. Stafford",
   "license": "MIT",
   "dependencies": {
-    "@types/compression": "0.0.34",
+    "@types/compression": "0.0.35",
     "@types/helmet": "0.0.37",
     "@types/mongoose": "^4.7.25",
     "@types/node": "^8.0.47",

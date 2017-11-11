@@ -34,8 +34,7 @@ server.listen(envSettings.app.port, envSettings.app.host, () => {
     logger.info(`INFO: Node app ${envSettings.app.name} is running at ${server.url}`);
 
     mongoose.Promise = global.Promise;
-    var dbUrl = `mongodb://${envSettings.db.host}:${envSettings.db.port}`;
-    mongoose.connect(dbUrl, { useMongoClient: true });
+    mongoose.connect(envSettings.db.connection, { useMongoClient: true });
     const db = mongoose.connection;
 
     db.on('error', (err) => {
@@ -44,7 +43,7 @@ server.listen(envSettings.app.port, envSettings.app.host, () => {
     });
 
     db.once('open', () => {
-        logger.info(`INFO: MongoDB database ${envSettings.db.name} is running at ${dbUrl}`);
+        logger.info(`INFO: MongoDB database ${envSettings.app.name} is running at ${envSettings.db.connection}`);
         fs.readdirSync(__dirname + '/routes').forEach((routeConfig: string) => {
             if (routeConfig.substr(-3) === '.js' && routeConfig !== 'index.js') {
                 const route = require(__dirname + '/routes/' + routeConfig);

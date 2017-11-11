@@ -7,12 +7,11 @@ export default class Config {
     private nodeHost = process.env.NODE_HOST || '127.0.0.1';
     private nodePort = process.env.NODE_PORT || 3000;
 
-    private mongoHost = process.env.MONGO_HOST || '127.0.0.1';
-    private mongoPort = process.env.MONGO_PORT || 27017;
-    private logLevel = process.env.LOG_LEVEL || 'info';
+    private appName = process.env.APP_NAME || `node-restify-mongodb-${this.nodeHost}`;
+    private appVersion = process.env.APP_VERSION || '1.0.0';
 
-    private appName = 'node-restify-mongodb-';
-    private appVersion = '1.0.0';
+    private mongoConnect = process.env.MONGO_CONNECT || 'mongodb://localhost:27017';
+    private logLevel = process.env.LOG_LEVEL || 'info';
 
     envSettings = {
         environment: this.nodeEnv,
@@ -24,12 +23,9 @@ export default class Config {
             version: this.appVersion
         },
         db: {
-            name: this.appName + this.nodeEnv,
-            host: this.mongoHost,
-            port: this.mongoPort,
+            connection: this.mongoConnect
         },
         log: {
-            name: this.appName + this.nodeEnv,
             level: this.logLevel
         }
     };
