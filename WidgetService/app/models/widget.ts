@@ -21,11 +21,12 @@ let widgetSchema = new Schema({
     size: {
         type: String,
         required: true,
-        'enum': ['Huge', 'Big', 'Medium', 'Small', 'Tiny']
+        'enum': ['XL', 'Large', 'Medium', 'Small', 'XS']
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     inventory: {
         type: Number,
@@ -39,11 +40,9 @@ widgetSchema.set('timestamps', true); // include timestamps in docs
 
 widgetSchema.plugin(uniqueValidator);
 
-// Ensure virtual fields are serialised.
 widgetSchema.set('toJSON', {
-    virtuals: true,
-    transform: (doc: any, ret: any, options: any) => {
-        ret.price = Number(ret.price / 100).toFixed(2);
+    virtuals: true, // Ensure virtual fields are serialized
+    transform: (doc: any, ret: any) => {
         delete ret.__v; // hide
         delete ret._id; // hide
     }

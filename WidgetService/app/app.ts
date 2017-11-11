@@ -30,7 +30,7 @@ server.use(restify.plugins.queryParser({ mapParams: true }));
 server.use(restify.plugins.fullResponse());
 server.use(restify.plugins.authorizationParser());
 
-server.listen(envSettings.app.port, () => {
+server.listen(envSettings.app.port, envSettings.app.host, () => {
     logger.info(`INFO: Node app ${envSettings.app.name} is running at ${server.url}`);
 
     mongoose.Promise = global.Promise;

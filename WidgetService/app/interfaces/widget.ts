@@ -4,4 +4,5 @@
     color: string;
     size: string;
     price: number;
+    inventory: number;
 }

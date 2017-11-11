@@ -1,5 +1,7 @@
 import { Request, Response, Next } from 'restify';
 import { Widget } from '../models/Widget';
+import WidgetInterface = require("../interfaces/widget");
+import IWidget = WidgetInterface.IWidget;
 
 export default class WidgetController {
 
