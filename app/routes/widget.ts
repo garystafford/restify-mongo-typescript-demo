@@ -9,6 +9,6 @@ export function routes(server: Server) {
     server.get({ path: path, version: version }, widgetCtrl.findDocuments);
     server.get({ path: path + '/:product_id', version: version }, widgetCtrl.findOneDocument);
     server.post({ path: path, version: version }, widgetCtrl.createDocument);
-    //server.put({ path: path, version: version }, widgetCtrl.updateDocument);
-    //server.del({ path: path + '/:product_id', version: version }, widgetCtrl.deleteDocument);
+    server.put({ path: path, version: version }, widgetCtrl.updateDocument);
+    server.del({ path: path + '/:product_id', version: version }, widgetCtrl.deleteDocument);
 };

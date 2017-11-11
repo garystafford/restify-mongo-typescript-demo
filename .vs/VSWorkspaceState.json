@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\config",
+    "\\app\\models",
+    "\\app\\routes",
+    "\\bin",
+    "\\test"
+  ],
+  "SelectedNode": "\\app\\routes\\widget.ts",
+  "PreviewInSolutionExplorer": false
+}

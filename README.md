@@ -9,6 +9,9 @@ Widget microservice, written with Node.js, Restify 6, Mongoose for MongoDB, and 
 ```bash
 # recommend using yarn instead of npm
 npm install -g yarn
+
+# install node packages
+yarn
 yarn install
 
 # install typescript globally

@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as restify from 'restify';
 import mongoose = require('mongoose');
+import corsMiddleware = require('restify-cors-middleware');
 
 import configuration from './config/config';
 import { logger } from './services/logger';
@@ -13,8 +14,15 @@ export let server = restify.createServer({
     version: envSettings.app.version
 });
 
-//restify.CORS.ALLOW_HEADERS.push('authorization');
-//server.use(restify.CORS());
+const cors = corsMiddleware({
+    preflightMaxAge: 5, //Optional 
+    origins: ['*'],
+    allowHeaders: ['API-Token'],
+    exposeHeaders: ['API-Token-Expiry']
+});
+
+server.pre(cors.preflight);
+server.use(cors.actual);
 server.pre(restify.pre.sanitizePath());
 server.use(restify.plugins.jsonBodyParser({ mapParams: true }));
 server.use(restify.plugins.acceptParser(server.acceptable));
