@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/bluebird@^3.5.18":
+  version "3.5.18"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.18.tgz#6a60435d4663e290f3709898a4f75014f279c4d6"
+
 "@types/body-parser@*":
   version "1.16.7"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.7.tgz#455fc23fd0ddaaeda6cd6cbb653558276e5920fa"
@@ -188,7 +192,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bluebird@^3.5.0:
+bluebird@^3.5.0, bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 

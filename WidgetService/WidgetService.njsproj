@@ -44,6 +44,7 @@
     <TypeScriptCompile Include="app\routes\widget.ts" />
     <TypeScriptCompile Include="app\services\logger.ts" />
     <TypeScriptCompile Include="app\types.d.ts" />
+    <Content Include="data\widgets.json" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
@@ -59,6 +60,7 @@
     <Folder Include="app\interfaces\" />
     <Folder Include="app\routes\" />
     <Folder Include="app\services\" />
+    <Folder Include="data\" />
     <Folder Include="test\" />
     <Folder Include="test\integration\" />
     <Folder Include="test\integration\controllers\" />

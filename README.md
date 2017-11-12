@@ -2,7 +2,7 @@
 
 _Work in progress..._
 
-Widget microservice, written with Node.js, Restify 6, Mongoose for MongoDB, and Typescript 2.x. Orginal project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
+Example of a simple microservice, written with Node.js 8, Restify 6, Mongoose 4 for MongoDB, and Typescript 2.6. Orginal project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
 
 ## Working with Project
 
@@ -38,5 +38,11 @@ curl http://localhost:3000/api/ping
 
 # kill node process(es) on Windows
 taskkill /F /IM node.exe
+```
+
+Import the supplied set of sample widget documents into the local development instance of MongoDB from the supplied 'data/widgets.json' file.
+
+```bash
+NODE_ENV=development grunt mongoimport --verbose
 ```
 

@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as restify from 'restify';
+import bluebird = require('bluebird');
 import mongoose = require('mongoose');
 import corsMiddleware = require('restify-cors-middleware');
 
@@ -32,9 +33,11 @@ server.use(restify.plugins.authorizationParser());
 
 server.listen(envSettings.app.port, envSettings.app.host, () => {
     logger.info(`INFO: Node app ${envSettings.app.name} is running at ${server.url}`);
+    const options = { useMongoClient: true, authSource: 'admin', promiseLibrary: bluebird };
+    const dbUri = `${envSettings.db.connection}/${envSettings.app.name}`;
+    mongoose.Promise = bluebird;
+    mongoose.connect(dbUri, options);
 
-    mongoose.Promise = global.Promise;
-    mongoose.connect(envSettings.db.connection, { useMongoClient: true });
     const db = mongoose.connection;
 
     db.on('error', (err) => {

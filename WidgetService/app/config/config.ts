@@ -7,7 +7,7 @@ export default class Config {
     private nodeHost = process.env.NODE_HOST || '127.0.0.1';
     private nodePort = process.env.NODE_PORT || 3000;
 
-    private appName = process.env.APP_NAME || `node-restify-mongodb-${this.nodeHost}`;
+    private appName = process.env.APP_NAME || `node-restify-mongodb`;
     private appVersion = process.env.APP_VERSION || '1.0.0';
 
     private mongoConnect = process.env.MONGO_CONNECT || 'mongodb://localhost:27017';
@@ -17,7 +17,7 @@ export default class Config {
         environment: this.nodeEnv,
         root: this.rootPath,
         app: {
-            name: this.appName + this.nodeEnv,
+            name: this.appName + '-' + this.nodeEnv,
             host: this.nodeHost,
             port: this.nodePort,
             version: this.appVersion
