@@ -33,8 +33,8 @@ yarn test
 # start (transpiles first)
 yarn start
 
-# test sample endpoint
-curl http://localhost:3000/api/ping
+# test HTTP GET endpoint
+curl http://localhost:3000/widgets
 
 # kill node process(es) on Windows
 taskkill /F /IM node.exe
