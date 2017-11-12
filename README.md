@@ -43,6 +43,6 @@ taskkill /F /IM node.exe
 Import the supplied set of sample widget documents into the local development instance of MongoDB from the supplied 'data/widgets.json' file.
 
 ```bash
-NODE_ENV=development grunt mongoimport --verbose
+mongoimport --host ${MONGO_CONNECT}  --authenticationDatabase admin --db node-restify-mongodb-development --collection widgets --file data/widgets.json --drop --jsonArray --verbose
 ```
 
