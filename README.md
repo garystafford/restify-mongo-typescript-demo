@@ -1,8 +1,8 @@
-# Node-Restify-Mongoose Microservice
+# Restify-Mongoose-TypeScript Microservice
 
 _Work in progress..._
 
-Example of a simple microservice, written with Node.js 8, Restify 6, Mongoose 4 for MongoDB, and Typescript 2.6. Orginal project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
+Example of a simple microservice, written with Node.js 8, Restify 6, Mongoose 4 for MongoDB, and Typescript 2.6. Original project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
 
 ## Working with Project
 
@@ -51,4 +51,3 @@ mongoimport \
   --file data/widgets.json \
   --drop --jsonArray --verbose
 ```
-
