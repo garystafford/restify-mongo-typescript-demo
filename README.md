@@ -1,4 +1,4 @@
-# Widget Service
+# Node-Restify-Mongoose Microservice
 
 _Work in progress..._
 
