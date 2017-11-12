@@ -43,7 +43,6 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="app\routes\widget.ts" />
     <TypeScriptCompile Include="app\services\logger.ts" />
-    <TypeScriptCompile Include="app\types.d.ts" />
     <Content Include="data\widgets.json" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
