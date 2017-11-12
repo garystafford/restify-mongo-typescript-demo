@@ -44,11 +44,11 @@ Import the supplied set of sample widget documents into the local development in
 
 ```bash
 mongoimport \
-	--host ${MONGO_CONNECT} \
-	--authenticationDatabase admin \
-	--db node-restify-mongodb-development \
-	--collection widgets \
-	--file data/widgets.json \
-	--drop --jsonArray --verbose
+  --host ${MONGO_CONNECT} \
+  --authenticationDatabase admin \
+  --db node-restify-mongodb-development \
+  --collection widgets \
+  --file data/widgets.json \
+  --drop --jsonArray --verbose
 ```
 
