@@ -43,7 +43,7 @@
     "product_id": "6T2HC5MIZ9",
     "name": "Chaintwist",
     "color": "Purple",
-    "size": "Tiny",
+    "size": "XS",
     "price": 99.95,
     "inventory": 15
   },
@@ -51,7 +51,7 @@
     "product_id": "ERZ1RMJFR3",
     "name": "Glozzom",
     "color": "Red",
-    "size": "Huge",
+    "size": "XL",
     "price": 199.98,
     "inventory": 35
   },
@@ -67,7 +67,7 @@
     "product_id": "N43WV5234S",
     "name": "Zapster",
     "color": "Green",
-    "size": "Tiny",
+    "size": "XS",
     "price": 17.49,
     "inventory": 65
   },
@@ -75,7 +75,7 @@
     "product_id": "N212QZOD9B",
     "name": "Pentwist",
     "color": "Yellow",
-    "size": "Huge",
+    "size": "XL",
     "price": 159.98,
     "inventory": 95
   }

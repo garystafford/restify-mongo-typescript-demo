@@ -19,18 +19,20 @@ describe('sample route controller', () => {
         sandbox.restore();
     });
 
-    it('should return pong', (done) => {
+    it('should return 200', (done) => {
         supertest(server)
-            .get('/api/ping')
+            .get('/api/widgets')
             .end((err: any, response: supertest.Response) => {
                 if (err) {
                     done(err);
+                    server.close();
                 }
                 else {
                     expect(response.status).to.equal(200);
-                    expect(response.body).to.equal('pong');
+                    expect(response.body).to.equal('[]');
                     expect(logInfoStub.callCount).to.equal(1);
                     done();
+                    server.close();
                 }
             });
     });

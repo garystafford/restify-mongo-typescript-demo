@@ -2,7 +2,7 @@ import widgetController from "../controllers/widget";
 import { Server } from 'restify';
 
 export function routes(server: Server) {
-    const path = '/widgets';
+    const path = '/api/widgets';
     const version = '1.0.0';
     const widgetCtrl = new widgetController();
 
