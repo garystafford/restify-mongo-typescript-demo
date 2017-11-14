@@ -2,7 +2,7 @@
 
 _Work in progress..._
 
-Example of a simple microservice, written with Node.js 8.x, Restify 6.x, Mongoose 4.x for MongoDB, and Typescript 2.6. Original project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
+Example of a simple microservice, written with Node.js 8.x, Restify 6.x, Mongoose 4.x for MongoDB, and Typescript 2.6\. Original project structure based on [restify-typescript-seed](https://github.com/sulhome/restify-typescript-seed) GitHub project.
 
 Project built in Visual Studio 2017 on Windows using the TypeScript Node.js template.
 
@@ -42,6 +42,7 @@ curl http://localhost:3000/widgets
 taskkill /F /IM node.exe
 ```
 
+## Mongo Import Sample Data
 Import the supplied set of sample widget documents into the local development instance of MongoDB from the supplied 'data/widgets.json' file.
 
 ```bash
@@ -59,4 +60,15 @@ mongoimport ^
   --collection widgets ^
   --file data/widgets.json ^
   --drop --jsonArray --verbose
+```
+
+## SonarQube
+Test TypeScript files. Requires SonarQube.
+
+```bash
+# windows
+sonar-scanner ^
+  -Dsonar.projectKey=WidgetService ^
+  -Dsonar.sources=. ^
+  -Dsonar.inclusions=app/**,test/**
 ```
