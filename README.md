@@ -35,7 +35,7 @@ yarn test
 # start (transpiles first)
 yarn start
 
-# test HTTP GET endpoint
+# test local HTTP GET endpoint
 curl http://localhost:3000/widgets
 
 # kill node process(es) on Windows
@@ -45,11 +45,18 @@ taskkill /F /IM node.exe
 Import the supplied set of sample widget documents into the local development instance of MongoDB from the supplied 'data/widgets.json' file.
 
 ```bash
-mongoimport \
-  --host ${MONGO_CONNECT} \
-  --authenticationDatabase admin \
-  --db node-restify-mongodb-development \
-  --collection widgets \
-  --file data/widgets.json \
+# windows
+SET MONGO_URL=localhost:27017
+SET MONGO_USERNAME=<your_username>
+SET MONGO_PASSWORD=<your_password>
+
+mongoimport ^
+  --host %MONGO_URL% ^
+  --username %MONGO_USERNAME% ^
+  --password %MONGO_PASSWORD% ^
+  --authenticationDatabase admin ^
+  --db node-restify-mongodb-development ^
+  --collection widgets ^
+  --file data/widgets.json ^
   --drop --jsonArray --verbose
 ```
